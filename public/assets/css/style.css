@@ -1,0 +1,28 @@
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    left: 10px;
+}
+
+#scrapping {
+    padding: 0;
+    top: 65px;
+    left: 404px;
+    width: 40%;
+    height: 30%;
+}
+
+element.style {
+    text-align: center;
+    font-size: 190%;
+    padding: 10px;
+}
+
+.myImage {
+    background-image: url(../images/buildingLookingUp.jpg);
+    background-size: 100%;
+    height: 200px;
+}

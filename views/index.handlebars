@@ -1,15 +1,28 @@
-<nav>
+<div class="container">
+  <nav>
     <div class="nav-wrapper">
-     <h2>Mongo Scraper!</h2>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <a href="/" class="brand-logo">Mongo Scraper!</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
-        <li><a href="/articles/:id">Saved Articles</a></li>
-        <a class="waves-effect waves-light btn">Scrape New Articles!</a>
+        <li><a href="articles/:id">Saved Articles</a></li>
       </ul>
     </div>
-</nav>
-
+  </nav>
+</div>
 <div class="container">
-    <h1 id="title">Mongo Scraper!</h1>
+  <div class="myImage">
+      <a class="waves-effect waves-light btn" id="scrapping">Scrape New Articles!</a>
+  </div>
+    
+</div>
+<div class="container">
+  <ul>
+    {{#each articles}}
+      <li>
+        <p>ID: {{this.id}}</p>
+        <p>Task: {{this.task}}</p>
+      </li>
+    {{/each}}
+  </ul>
 </div>
 

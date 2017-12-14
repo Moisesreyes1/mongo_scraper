@@ -18,6 +18,7 @@ var app = express();
 
 // Set Handlebars as the default templating engine.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
 app.set("view engine", "handlebars");
 
 // Use morgan logger for logging requests
@@ -30,11 +31,16 @@ app.use(express.static("public"));
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/week18Populater", {
+mongoose.connect("mongodb://localhost/MongoScraper", {
     useMongoClient: true
 });
 
 // Routes
+
+// Home route
+app.get("/", function(req, res) {
+    res.render("index");
+});
 
 // A GET route for scraping the lakenona website
 app.get("/scrape", function(req, res) {
