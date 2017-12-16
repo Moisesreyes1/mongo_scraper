@@ -1,10 +1,26 @@
-<div class="container">
-  <ul>
-    {{#each articles}}
-      <li>
-        <p>ID: {{this.title}}</p>
-        <p>Task: {{this.link}}</p>
-      </li>
-    {{/each}}
-  </ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          {{!-- <span class="card-title">{{this.title}}</span> --}}
+          <ul id="cards">
+            {{#each articles}}
+              <li>
+                <p id="myTitle">{{this.title}}</p>
+                <p>{{this.description}}</p>
+                <a href="http://www.lakenonasocial.com/">{{this.link}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        {{!-- <div class="card-action">
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div> --}}
+      </div>
+    </div>
+  <div class="col s12 m6">
+    <div id="myNotes"></div>
+  </div>
+  </div>
 </div>
